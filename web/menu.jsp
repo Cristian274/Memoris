@@ -246,19 +246,7 @@
         </li>
         <!--Cuidador-->
 
-         <li class="nav-item">
-          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-            <i class="fas fa-user-md"></i>
-            <span>Cuidador</span>
-          </a>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-              <h6 class="collapse-header">Gestiones:</h6>
-             
-              <a class="collapse-item" href="rcuidador.jsp">Consultar</a>
-            </div>
-          </div>
-        </li>
+       
 
         <!-- Enfermedad -->
 
@@ -363,7 +351,7 @@
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Gestiones:</h6>
-              <a class="collapse-item" href="cadulto.jsp">Crear</a>
+              
               <a class="collapse-item" href="radulto.jsp">Consultar</a>
             </div>
           </div>
@@ -473,8 +461,10 @@
           <!-- End of Topbar -->
 
           <!-- Begin Page Content -->
-
           
+          <%if (usuVO.getRol().equals("1") ) {%>
+                  
+           
           <div class="container-fluid">
             <div class="row" style="margin-top:50px;">
             <div class="col-xl-3 col-md-6 mb-2">
@@ -483,8 +473,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Adulto mayor</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="cadulto.jsp"><div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="radulto.jsp"><div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Consultar</div></a>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-wheelchair fa-2x text-gray-300"></i>
@@ -500,8 +490,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Familiar</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="cfamiliar.jsp"><div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="rfamiliar.jsp"><div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Consultar</div></a>
                     </div>
                       <div class="col-auto">
                       <i class="fas fa-male fa-2x text-gray-300"></i>
@@ -517,8 +507,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Cuidador</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-three text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-three text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="ccuidador.jsp"><div class="text-xs font-weight-bold text-three text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="rcuidador.jsp"><div class="text-xs font-weight-bold text-three text-uppercase mb-1">Consultar</div></a>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-user-md fa-2x text-gray-300"></i>
@@ -536,8 +526,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Alarma</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-four text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-four text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="calarma.jsp"><div class="text-xs font-weight-bold text-four text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="ralarma.jsp"><div class="text-xs font-weight-bold text-four text-uppercase mb-1">Consultar</div></a>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clock fa-2x text-gray-300"></i>
@@ -553,8 +543,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Enfermedad</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-five text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-five text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="cenfermedad.jsp"><div class="text-xs font-weight-bold text-five text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="renfermedad.jsp"><div class="text-xs font-weight-bold text-five text-uppercase mb-1">Consultar</div></a>
                     </div>
                       <div class="col-auto">
                       <i class="fas fa-bug fa-2x text-gray-300"></i>
@@ -570,8 +560,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Medicamento</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-six text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-six text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="cmedicamento.jsp"><div class="text-xs font-weight-bold text-six text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="rmedicamento.jsp"><div class="text-xs font-weight-bold text-six text-uppercase mb-1">Consultar</div></a>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-medkit fa-2x text-gray-300"></i>
@@ -589,8 +579,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Receta médica</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-seven text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-seven text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="creceta.jsp"><div class="text-xs font-weight-bold text-seven text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="rreceta.jsp"><div class="text-xs font-weight-bold text-seven text-uppercase mb-1">Consultar</div></a>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-clipboard fa-2x text-gray-300"></i>
@@ -606,8 +596,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Reporte</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-eight text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-eight text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="creporte.jsp"><div class="text-xs font-weight-bold text-eight text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="rreporte.jsp"><div class="text-xs font-weight-bold text-eight text-uppercase mb-1">Consultar</div></a>
                     </div>
                       <div class="col-auto">
                       <i class="fas fa-file fa-2x text-gray-300"></i>
@@ -623,8 +613,8 @@
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="h5 mb-0 font-weight-bold text-gray-800">Usuario</div><hr>
-                      <a  style="color: white;" href=""><div class="text-xs font-weight-bold text-nine text-uppercase mb-1">Crear</div></a>
-                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-nine text-uppercase mb-1">Consultar</div></a>
+                      <a  style="color: white;" href="cusuario.jsp"><div class="text-xs font-weight-bold text-nine text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="rusuario.jsp"><div class="text-xs font-weight-bold text-nine text-uppercase mb-1">Consultar</div></a>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-address-card fa-2x text-gray-300"></i>
@@ -634,6 +624,184 @@
               </div>
             </div>
             </div>
+                 <%}%>
+
+          <%if (usuVO.getRol().equals("2") ) {%>
+                  
+           
+          <div class="container-fluid">
+            <div class="row" style="margin-top:50px;">
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Adulto mayor</div><hr>
+                      
+                      <a style="color: white;" href="radulto.jsp"><div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-wheelchair fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Familiar</div><hr>
+                      
+                      <a style="color: white;" href="rfamiliar.jsp"><div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                      <div class="col-auto">
+                      <i class="fas fa-male fa-2x text-gray-300"></i>
+                      <i class="fas fa-female fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            </div>
+
+            <div class="row" style="margin-top:50px;">
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-four shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Alarma</div><hr>
+                      <a  style="color: white;" href="calarma.jsp"><div class="text-xs font-weight-bold text-four text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="ralarma.jsp"><div class="text-xs font-weight-bold text-four text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clock fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-five shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Enfermedad</div><hr>
+                      
+                      <a style="color: white;" href="renfermedad.jsp"><div class="text-xs font-weight-bold text-five text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                      <div class="col-auto">
+                      <i class="fas fa-bug fa-2x text-gray-300"></i>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-six shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Medicamento</div><hr>
+                      
+                      <a style="color: white;" href="rmedicamento.jsp"><div class="text-xs font-weight-bold text-six text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-medkit fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="row" style="margin-top:50px;">
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-seven shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Receta médica</div><hr>
+                      
+                      <a style="color: white;" href="rreceta.jsp"><div class="text-xs font-weight-bold text-seven text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-eight shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Reporte</div><hr>
+                      <a  style="color: white;" href="creporte.jsp"><div class="text-xs font-weight-bold text-eight text-uppercase mb-1">Crear</div></a>
+                      <a style="color: white;" href="rreporte.jsp"><div class="text-xs font-weight-bold text-eight text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                      <div class="col-auto">
+                      <i class="fas fa-file fa-2x text-gray-300"></i>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            </div>
+                 <%}%>
+                   
+          <%if (usuVO.getRol().equals("3") ) {%>
+                  
+           
+          <div class="container-fluid">
+            <div class="row" style="margin-top:50px;">
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Adulto mayor</div><hr>
+                      
+                      <a style="color: white;" href="radulto.jsp"><div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-wheelchair fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-xl-3 col-md-6 mb-2">
+              <div class="card border-left-eight shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Reporte</div><hr>
+                      <a style="color: white;" href=""><div class="text-xs font-weight-bold text-eight text-uppercase mb-1">Consultar</div></a>
+                    </div>
+                      <div class="col-auto">
+                      <i class="fas fa-file fa-2x text-gray-300"></i>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            </div>
+                 <%}%>
             
 
 

@@ -578,13 +578,13 @@
 	                  	</div>
 
 	              
-	                  <input type="Hidden" value="2" name="opcion">
+	                  
+
+	                </div>
+	               	<input type="Hidden" value="2" name="opcion">
 	                  <button class="btn btn-success"> Modificar</button>
 
 	                  <%}%>
-
-	                </div>
-	               	
 	                	 
 	              </div>
 	              <label class="alert-primary">
